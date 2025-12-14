@@ -1,3 +1,12 @@
+## Stopping Kanata Manually
+
+To kill the running Kanata process:
+
+```
+sudo pkill kanata
+```
+
+This will terminate all running Kanata processes.
 ## Kanata macOS Launchctl Management
 
 ### Enable Kanata Auto-Start (system-wide)
@@ -56,3 +65,12 @@ To fix both I had to:
 
 The 'main' installation didn't work from kanata suggested link.
 What truly did work was follow the order bellow of the links and only do the truly necessary remaining step that were not covered on the first link
+
+* https://github.com/jtroo/kanata/issues/1264#issuecomment-2763085239
+* https://github.com/jtroo/kanata/discussions/1537
+
+### Documentation
+
+* [Typeractive base 5 columnar layout](https://docs.typeractive.xyz/build-guides/corne-wireless/firmware)
+* [General kanata key documentation](https://github.com/jtroo/kanata/blob/main/docs/config.adoc)
+* [Kanata key definitions source code](https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs)
