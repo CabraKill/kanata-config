@@ -69,6 +69,14 @@ What truly did work was follow the order bellow of the links and only do the tru
 * https://github.com/jtroo/kanata/issues/1264#issuecomment-2763085239
 * https://github.com/jtroo/kanata/discussions/1537
 
+### Fn keys
+
+Right the fn keys are not working even thought they are not declared.
+Redeclaring it may fix it but not done yet.
+
+Issue with some examples:
+* https://github.com/jtroo/kanata/issues/1311
+
 ### Documentation
 
 * [Typeractive base 5 columnar layout](https://docs.typeractive.xyz/build-guides/corne-wireless/firmware)
