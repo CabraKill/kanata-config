@@ -8,7 +8,9 @@
 
 (defsrc
   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
-  caps a s d f j k l ;
+  q    w    e    r    t    y    u    i    o    p
+  a    s    d    f    g    h    j    k    l    ;
+  z    x    c    v    b    n    m    ,    .    /
   fn
 )
 (defvar
@@ -27,16 +29,29 @@
   l (tap-hold $tap-time $hold-time l ralt)
   ; (tap-hold $tap-time $hold-time ; rmet)
   fnl (tap-hold 200 200 fn (layer-toggle fn))
+  v (tap-hold $tap-time $hold-time v (layer-toggle lower))
 )
 
 (deflayer base
   brdn  brup  _    _    _    _   prev  pp  next  mute  vold  volu
-  @escctrl @a @s @d @f @j @k @l @;
+    q     w    e    r    t    y    u    i    o    p
+    @a    @s   @d   @f   g    h    @j   @k   @l   ;
+    z     x    c    @v   b    n    m    ,    .    /
   @fnl
+)
+;; lower layer: S-1 = !, S-2 = @, S-3 = #, S-4 = $, S-5 = %
+(deflayer lower
+  _     _     _     _     _     _     _     _     _     _     _     _
+  S-1   S-2   S-3   S-4   S-5   _     _     _     _     _
+  _     _     _     _     _     _     _     _     _     _
+  _     _     _     _     _     _     _     _     _     _
+  _
 )
 
 (deflayer fn
   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
-  @escctrl _ _ _ _ _ _ _ _
+    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _
   fn
 )
