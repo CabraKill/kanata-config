@@ -30,12 +30,19 @@
   l (tap-hold $tap-time $hold-time l ralt)
   ; (tap-hold $tap-time $hold-time ; rmet)
   v (tap-hold $tap-time $hold-time v (layer-toggle lower))
+  n (tap-hold $tap-time $hold-time n (layer-toggle raise))
+
+  ;; In ISO German QWERTZ, force unshifted symbols even if shift is held
+  { (unshift rsft BracketLeft)
+  } (unshift rsft BracketRight)
+  ;;[ (unshift ralt 8)
+  ;;] (unshift ralt 9)
 )
 
 (deflayer base
     q     w    e    r    t    y    u    i    o    p
     @a    @s   @d   @f   g    h    @j   @k   @l   @;
-    z     x    c    @v   b    n    m    ,    .    /
+    z     x    c    @v   b    @n    m    ,    .    /
 )
 
 ;; lower layer: S-1 = !, S-2 = @, S-3 = #, S-4 = $, S-5 = %
@@ -43,4 +50,11 @@
   S-1      S-2      S-3      S-4      S-5   S-6   S-7   S-8   S-9    S-0
   @aLower  @sLower  @dLower  @fLower  _     left  down  up    right  _
   _        _        _        _        _     _     _     _     _      _
+)
+
+;; raise layer: symbols and numbers as per provided image
+(deflayer raise
+  1      2      3      4      5      6      7      8      9      0
+  -      =      @{      BracketLeft      S-9      S-0      BracketRight      @}      Slash      Backslash
+  `      _      _      ,      S-;    ;      .      lctrl  ralt   _
 )
