@@ -49,12 +49,12 @@
 (deflayer lower
   S-1      S-2      S-3      S-4      S-5   S-6   S-7   S-8   S-9    S-0
   @aLower  @sLower  @dLower  @fLower  _     left  down  up    right  _
-  _        _        _        _        _     _     _     _     _      _
+  _        _        _        _        ret     esc     bspc     _     _      _
 )
 
 ;; raise layer: symbols and numbers as per provided image
 (deflayer raise
   1      2      3      4      5      6      7      8      9      0
   -      =      @{      BracketLeft      S-9      S-0      BracketRight      @}      Slash      Backslash
-  `      _      _      ,      S-;    ;      .      lctrl  ralt   _
+  `      _      tab      ,      S-;    ;      .      lctrl  ralt   _
 )
